@@ -27,7 +27,7 @@ const newPurpose2 = async(categoryId) => {
 
     cardContainer.innerHTML="";
 
-    data2.data?.forEach((news) => {
+    data2.data?.forEach((videos) => {
         const div = document.createElement("div");
      
         div.innerHTML=`
@@ -35,7 +35,7 @@ const newPurpose2 = async(categoryId) => {
             <div class="card w-96 bg-base-100 shadow-xl">
 
                 <figure>
-                    <img src=${news?.thumbnail}/>
+                    <img src=${videos?.thumbnail}/>
                 </figure>
 
                 <div class="card-body">
@@ -46,19 +46,19 @@ const newPurpose2 = async(categoryId) => {
                         <div class="flex">
                             <div class="avatar online">
                                 <div class="w-14 rounded-full">
-                                    <img src= ${news?.authors[0].profile_picture} alt="">
+                                    <img src= ${videos?.authors[0].profile_picture} alt="">
                                 </div>
                             </div>
 
                             <div>
-                                <h2 class="card-title">${news?.title}</h2>
+                                <h2 class="card-title">${videos?.title}</h2>
                                 <div class="flex">
-                                    <h6>${news?.authors[0].profile_name}</h6>
-                                <div class="badge badge-secondary p-2">${news?.authors[0].verified}</div> 
+                                    <h6>${videos?.authors[0].profile_name}</h6>
+                                <div class="badge badge-secondary p-2">${videos?.authors[0].verified}</div> 
                             </div>                         
                             </div>
                         </div>                        
-                        <h3>${news?.others.views?news.others.views:" "}</h3>
+                        <h3>${videos?.others.views?videos.others.views:" "}</h3>
 
                         
                     </div>
@@ -74,7 +74,7 @@ const newPurpose2 = async(categoryId) => {
         
         
         `;
-        console.log(news)
+        
 
         cardContainer.appendChild(div); 
     });
