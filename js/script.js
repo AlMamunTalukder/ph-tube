@@ -35,7 +35,7 @@ const newPurpose2 = async(categoryId) => {
             <div class="card w-96 bg-base-100 shadow-xl">
 
                 <figure>
-                    <img src=${videos?.thumbnail}/>
+                    <img class="h-[216px] w-[384px]"  src=${videos?.thumbnail}/>
                 </figure>
 
                 <div class="card-body">
@@ -83,5 +83,5 @@ const newPurpose2 = async(categoryId) => {
 
 
 handleCategory2(); 
-newPurpose2 ("1001");
+newPurpose2 ("1000");
 
