@@ -1,4 +1,4 @@
-const handleCategory2 = async() => {
+const handleCategory = async() => {
 
     const data1 = await fetch("https://openapi.programming-hero.com/api/videos/categories");
     const data2 = await data1.json();
@@ -20,7 +20,7 @@ const handleCategory2 = async() => {
 
 
 
-const newPurpose2 = async(categoryId) => {
+const newPurpose = async(categoryId) => {
 
     const data1 = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
     const data2 = await data1.json();
@@ -107,8 +107,8 @@ const newPurpose2 = async(categoryId) => {
     // If no data is available for this category, display a message and an image
     const noDataMessage = document.createElement("div");
     noDataMessage.innerHTML = `
-    <div class="text-center">
-        <div class="item-Center justify-center ">
+    <div class="text-center col-span-4">
+        <div class="item-Center justify-center col-span-4">
             <img src="images/Icon.png" alt="No Data Image" />
             <p>No data available for this category</p>
         </div>
@@ -150,6 +150,6 @@ const sortVideosByView = () => {
   sortButton.addEventListener("click", sortVideosByView);
 
 
-handleCategory2(); 
-newPurpose2 ("1000");
+handleCategory(); 
+newPurpose ("1000");
 
