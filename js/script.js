@@ -9,7 +9,7 @@ const handleCategory = async() => {
         const div = document.createElement("div");
 
     div.innerHTML = `
-        <button onclick="newPurpose2('${category.category_id}')" class="btn btn-active">${category.category}</button>
+        <button onclick="newPurpose('${category.category_id}')" class="btn btn-active">${category.category}</button>
     `;
 
         tabContainer.appendChild(div); 
