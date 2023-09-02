@@ -150,8 +150,6 @@ const sortVideosByView = () => {
   sortButton.addEventListener("click", sortVideosByView);
 
 
-
-
 handleCategory2(); 
 newPurpose2 ("1000");
 
